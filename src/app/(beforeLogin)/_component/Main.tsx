@@ -1,9 +1,9 @@
+import styles from "@/app/(beforeLogin)/_component/main.module.css";
 import Image from "next/image";
+import xLogo from "../../../../public/xLogo.png";
 import Link from "next/link";
-import styles from "./page.module.css";
-import xLogo from "../../public/xLogo.png";
 
-export default function Home() {
+export default function Main() {
   return (
     <>
       <div className={styles.left}>
