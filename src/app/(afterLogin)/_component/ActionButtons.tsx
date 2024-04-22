@@ -4,7 +4,7 @@ import style from "./post.module.css";
 import cx from "classnames";
 
 interface Props {
-  white: boolean;
+  white?: boolean;
 }
 
 export default function ActionButtons({ white }: Props) {
