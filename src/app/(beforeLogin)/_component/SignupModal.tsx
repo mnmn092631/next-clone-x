@@ -19,7 +19,7 @@ function showMessage(message: string | null | undefined) {
     return "이미지를 업로드하세요.";
   }
   if (message === "user_exists") {
-    return "이미 사용 중인 아이디입니다..";
+    return "이미 사용 중인 아이디입니다.";
   }
   return "";
 }
