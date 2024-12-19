@@ -1,6 +1,4 @@
-import Post from "@/app/(afterLogin)/_component/Post";
 import CommentForm from "@/app/(afterLogin)/[username]/status/[id]/_component/CommentForm";
-import ActionButtons from "@/app/(afterLogin)/_component/ActionButtons";
 import style from "./photoModal.module.css";
 import PhotoModalCloseButton from "@/app/(afterLogin)/@modal/[username]/status/[id]/photo/[photoId]/_component/PhotoModalCloseButton";
 import { faker } from "@faker-js/faker";
@@ -13,7 +11,6 @@ import { getSinglePost } from "@/app/(afterLogin)/[username]/status/[id]/_lib/ge
 import { getComments } from "@/app/(afterLogin)/[username]/status/[id]/_lib/getComments";
 import SinglePost from "@/app/(afterLogin)/[username]/status/[id]/_component/SinglePost";
 import Comments from "@/app/(afterLogin)/[username]/status/[id]/_component/Comments";
-import Image from "next/image";
 import ImageZone from "@/app/(afterLogin)/@modal/[username]/status/[id]/photo/[photoId]/_component/ImageZone";
 
 interface Props {
@@ -48,7 +45,7 @@ export default async function Page({ params }: Props) {
         <ImageZone id={id} />
         <div className={style.commentZone}>
           <SinglePost id={id} noImage />
-          <CommentForm />
+          <CommentForm id={id} />
           <Comments id={id} />
         </div>
       </HydrationBoundary>
